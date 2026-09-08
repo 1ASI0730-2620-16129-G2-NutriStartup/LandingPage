@@ -1,3 +1,31 @@
 h1 {
   text-decoration: underline;
 }
+.header {
+  background-color: #3cca6c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header .header-content {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem; /* altura del header */
+}
+
+.header .nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
