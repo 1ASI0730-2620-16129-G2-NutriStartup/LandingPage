@@ -1,31 +1,205 @@
-h1 {
-  text-decoration: underline;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.header {
-  background-color: #3cca6c;
-  position: fixed;
+
+body {
+  background-color: #f7f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+header {
+  background-color: #3cca6c; 
+  padding: 1rem 0;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
   z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.header .container {
+
+.container {
+  width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  margin: auto;
 }
 
-.header .header-content {
-  margin: 0.5rem 0;
+.nav-layout {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
   align-items: center;
-  height: 5rem; /* altura del header */
 }
 
-.header .nav-links {
+
+.brand-logo {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.3rem; 
+  font-weight: bold;
+}
+
+
+.nav-links {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #3cca6c;
+  list-style: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+section {
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+  max-width: 1000px;
+  margin: 25px auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+
+.info {
+  text-align: center;
+  background-color: #e8f5e9;
+}
+
+.info p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+
+.intro-startup {
+  margin-bottom: 20px;
+  text-align: center;
+  font-style: italic;
+}
+
+.mision-vision {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: #fdfdfd;
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+}
+
+
+.problematica ul {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.problematica li {
+  margin-bottom: 10px;
+}
+
+
+.integrantes h2 {
+  margin-bottom: 10px;
+}
+
+.team-grid {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff; 
+  border: 1px solid #ddd; 
+  border-radius: 6px;
+  margin-top: 0; 
+}
+
+.member {
+  padding: 20px 0;
+  margin: 0 30px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.member:last-child {
+  border-bottom: none;
+}
+
+.member h3 {
+  font-size: 1.2rem;
+  color: #3cca6c;
+  margin-bottom: 8px;
+}
+
+.member p {
+  color: #555;
+}
+
+
+.preguntas-frecuentes .faq-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.preguntas-frecuentes .faq-item h3 {
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: #ffffff;
+  margin-top: 50px;
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .mision-vision {
+    flex-direction: column;
+  }
 }
