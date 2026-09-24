@@ -1,0 +1,211 @@
+/* ======================================
+            OBJETIVOS
+====================================== */
+
+.goal-form{
+
+    margin-top:30px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.input-group label{
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#2D176D;
+
+}
+
+.input-group input,
+.input-group select{
+
+    padding:15px;
+
+    border:2px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:.3s;
+
+    background:white;
+
+}
+
+.input-group input:focus,
+.input-group select:focus{
+
+    outline:none;
+
+    border-color:#5A3CCB;
+
+    box-shadow:0 0 10px rgba(90,60,203,.2);
+
+}
+
+.save-btn{
+
+    grid-column:1/3;
+
+    margin-top:10px;
+
+    padding:16px;
+
+    background:#5A3CCB;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.save-btn:hover{
+
+    background:#4527A0;
+
+    transform:translateY(-3px);
+
+}
+
+.panel{
+
+    animation:fadeIn .6s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Tarjetas informativas */
+
+.goal-summary{
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.summary-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.summary-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.summary-card i{
+
+    font-size:40px;
+
+    color:#5A3CCB;
+
+    margin-bottom:15px;
+
+}
+
+.summary-card h3{
+
+    color:#555;
+
+    margin-bottom:10px;
+
+}
+
+.summary-card p{
+
+    font-size:24px;
+
+    font-weight:600;
+
+    color:#2D176D;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .goal-form{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .save-btn{
+
+        grid-column:1;
+
+    }
+
+    .goal-summary{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
