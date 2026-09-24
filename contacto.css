@@ -1,0 +1,236 @@
+﻿/* ======================================
+            CONTACTO
+====================================== */
+
+.contact-container{
+
+    display:grid;
+
+    grid-template-columns:350px 1fr;
+
+    gap:35px;
+
+    margin-top:30px;
+
+}
+
+/* Tarjeta izquierda */
+
+.contact-info{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.contact-info h2{
+
+    color:#2D176D;
+
+    margin-bottom:25px;
+
+}
+
+.contact-info h3{
+
+    color:#2D176D;
+
+    margin-top:25px;
+
+    margin-bottom:15px;
+
+}
+
+.contact-info p{
+
+    margin-bottom:18px;
+
+    color:#555;
+
+    line-height:1.6;
+
+}
+
+.contact-info i{
+
+    width:30px;
+
+    color:#5A3CCB;
+
+}
+
+.contact-info hr{
+
+    border:none;
+
+    height:1px;
+
+    background:#ddd;
+
+    margin:25px 0;
+
+}
+
+/* Formulario */
+
+.contact-form{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.contact-form h2{
+
+    color:#2D176D;
+
+    margin-bottom:30px;
+
+}
+
+#contactForm{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+#contactForm .input-group{
+
+    margin-bottom:20px;
+
+}
+
+#contactForm label{
+
+    font-weight:600;
+
+    color:#444;
+
+    margin-bottom:8px;
+
+    display:block;
+
+}
+
+#contactForm input,
+#contactForm textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    border:2px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:.3s;
+
+}
+
+#contactForm textarea{
+
+    resize:none;
+
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus{
+
+    outline:none;
+
+    border-color:#5A3CCB;
+
+    box-shadow:0 0 10px rgba(90,60,203,.2);
+
+}
+
+/* Botón */
+
+#contactForm .save-btn{
+
+    margin-top:10px;
+
+    padding:16px;
+
+    background:#5A3CCB;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#contactForm .save-btn:hover{
+
+    background:#43299A;
+
+    transform:translateY(-3px);
+
+}
+
+/* Animación */
+
+.contact-info,
+.contact-form{
+
+    animation:contactFade .6s ease;
+
+}
+
+@keyframes contactFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+
+    .contact-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
