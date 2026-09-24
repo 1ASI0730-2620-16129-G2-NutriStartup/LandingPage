@@ -47,6 +47,7 @@ header {
   display: flex;
   align-items: center;
   gap: 30px;
+  transition: background 0.3s;
 }
 
 .nav-links li a {
@@ -124,8 +125,12 @@ h1, h2, h3 {
   padding: 20px;
   border: 1px solid #eaeaea;
   border-radius: 6px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
 
 .problematica ul {
   margin-left: 20px;
@@ -155,6 +160,10 @@ h1, h2, h3 {
   margin: 0 30px;
   text-align: center;
   border-bottom: 1px solid #ddd;
+  transition: box-shadow 0.25s ease;
+}
+.member:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .member:last-child {
@@ -201,5 +210,15 @@ footer {
 
   .mision-vision {
     flex-direction: column;
+  }
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+}
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
   }
 }
