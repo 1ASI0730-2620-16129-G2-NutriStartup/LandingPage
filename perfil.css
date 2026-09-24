@@ -1,0 +1,240 @@
+/* ======================================
+            PERFIL
+====================================== */
+
+.profile-container{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:35px;
+
+    margin-top:30px;
+
+}
+
+/* Tarjeta izquierda */
+
+.profile-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.profile-image{
+
+    width:140px;
+
+    height:140px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#F2EEFF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.profile-image i{
+
+    font-size:90px;
+
+    color:#5A3CCB;
+
+}
+
+.profile-card h2{
+
+    color:#2D176D;
+
+    margin-bottom:10px;
+
+}
+
+.profile-card p{
+
+    color:#666;
+
+}
+
+/* Información */
+
+.profile-info{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.profile-info h2{
+
+    color:#2D176D;
+
+    margin-bottom:30px;
+
+}
+
+#perfilForm{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.input-group label{
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#444;
+
+}
+
+.input-group input,
+.input-group select{
+
+    padding:15px;
+
+    border:2px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    transition:.3s;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.input-group input:focus,
+.input-group select:focus{
+
+    outline:none;
+
+    border-color:#5A3CCB;
+
+    box-shadow:0 0 10px rgba(90,60,203,.2);
+
+}
+
+/* Botón */
+
+.save-btn{
+
+    grid-column:1/3;
+
+    background:#5A3CCB;
+
+    color:white;
+
+    border:none;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.save-btn:hover{
+
+    background:#43299A;
+
+    transform:translateY(-3px);
+
+}
+
+/* Animación */
+
+.profile-card,
+.profile-info{
+
+    animation:fadePerfil .6s ease;
+
+}
+
+@keyframes fadePerfil{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:1100px){
+
+.profile-container{
+
+grid-template-columns:1fr;
+
+}
+
+#perfilForm{
+
+grid-template-columns:1fr;
+
+}
+
+.save-btn{
+
+grid-column:1;
+
+}
+
+}
