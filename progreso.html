@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Progreso | VitaControl</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <h2>VitaControl</h2>
+
+        <p>Portal Rutinas Cambiantes</p>
+
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li>
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Inicio</span>
+
+                </a>
+
+            </li>
+
+            <li class="active">
+
+                <a href="progreso.html">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <span>Progreso</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="objetivo.html">
+
+                    <i class="fa-solid fa-bullseye"></i>
+
+                    <span>Objetivo</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="perfil.html">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>Mi Perfil</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="contacto.html">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span>Contáctanos</span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <div class="bottom-menu">
+
+        <a href="configuracion.html">
+
+            <i class="fa-solid fa-gear"></i>
+
+            Configuración
+
+        </a>
+
+        <a href="index.html">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Cerrar sesión
+
+        </a>
+
+    </div>
+
+</aside>
+
+<!-- CONTENIDO -->
+
+<main class="main-content">
+
+    <header class="topbar">
+
+        <div>
+
+            <h1>Mi Progreso 📈</h1>
+
+            <p>Consulta tu evolución y mantente motivado.</p>
+
+        </div>
+
+    </header>
+
+    <!-- Tarjetas -->
+
+    <section class="cards">
+
+        <div class="card">
+
+            <i class="fa-solid fa-weight-scale"></i>
+
+            <h3>Peso Inicial</h3>
+
+            <p>82 kg</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-heart"></i>
+
+            <h3>Peso Actual</h3>
+
+            <p>75 kg</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <h3>Meta</h3>
+
+            <p>70 kg</p>
+
+        </div>
+
+    </section>
+
+    <!-- Evolución -->
+
+    <section class="grafica">
+
+        <h2>Evolución del Peso</h2>
+
+        <canvas id="pesoChart"></canvas>
+
+    </section>
+
+    <br>
+
+    <!-- Estadísticas -->
+
+    <section class="cards">
+
+        <div class="card">
+
+            <i class="fa-solid fa-droplet"></i>
+
+            <h3>Agua</h3>
+
+            <p>1.8 L</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-shoe-prints"></i>
+
+            <h3>Pasos</h3>
+
+            <p>8 540</p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-person-running"></i>
+
+            <h3>Ejercicio</h3>
+
+            <p>45 min</p>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- Chart.js -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+const ctx=document.getElementById('pesoChart');
+
+new Chart(ctx,{
+
+type:'line',
+
+data:{
+
+labels:['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'],
+
+datasets:[{
+
+label:'Peso (kg)',
+
+data:[82,81,80,79,78,76,75],
+
+borderColor:'#5A3CCB',
+
+backgroundColor:'rgba(90,60,203,.2)',
+
+fill:true,
+
+tension:.4
+
+}]
+
+},
+
+options:{
+
+responsive:true
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>

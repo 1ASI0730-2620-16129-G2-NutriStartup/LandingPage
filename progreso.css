@@ -1,0 +1,68 @@
+/* ======================================
+        PROGRESO
+====================================== */
+
+.grafica{
+
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    margin-bottom:35px;
+
+}
+
+.grafica h2{
+
+    color:#2D176D;
+    margin-bottom:25px;
+
+}
+
+.grafica canvas{
+
+    width:100% !important;
+    max-height:400px;
+
+}
+
+/* Estadísticas inferiores */
+
+.cards:last-child .card{
+
+    transition:.3s;
+
+}
+
+.cards:last-child .card:hover{
+
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+
+}
+
+/* Animación */
+
+.card{
+
+    animation:aparecer .6s ease;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
