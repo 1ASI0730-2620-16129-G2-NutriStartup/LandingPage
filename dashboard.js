@@ -1,5 +1,5 @@
 ﻿// ===============================
-// Dashboard VitaControl
+// Dashboard NutriApp
 // ===============================
 
 // Mostrar saludo según la hora

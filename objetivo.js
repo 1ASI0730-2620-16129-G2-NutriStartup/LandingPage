@@ -1,5 +1,5 @@
 // ======================================
-// OBJETIVOS - VitaControl
+// OBJETIVOS - NutriApp
 // ======================================
 
 const formulario = document.querySelector(".goal-form");
