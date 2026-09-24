@@ -1,129 +1,511 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>NutriApp Integral / VitaControl</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VitaControl</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (Íconos) -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
+
+<!-- ================= NAVBAR ================= -->
+
 <header>
-  <nav class="header">
-    <div class="container nav-layout">
-      
-      <a href="#" class="brand-logo">NutriApp</a>
-      
-      <ul class="nav-links" id="navLinks">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Inicio</a>
-          <ul class="dropdown-menu">
-            <li><a href="#que-es">¿Qué es NutriApp?</a></li>
-            <li><a href="#como-funciona">¿Cómo funciona el sistema?</a></li>
-          </ul>
-        </li>
-        <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
-        <li><a href="#terminos">Términos y Condiciones</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </div>
-  </nav>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            VitaControl
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="#beneficios">Beneficios</a></li>
+            <li><a href="#funciones">Funciones</a></li>
+            <li><a href="#progreso">Progreso</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+
+        </ul>
+
+        <div class="buttons">
+
+            <button class="btn-login" onclick="abrirLogin()">
+                Iniciar sesión
+            </button>
+
+            <button class="btn-register" onclick="abrirRegistro()">
+                Registrarse
+            </button>
+
+        </div>
+
+    </nav>
+
 </header>
 
-<main>
-  <section class="info" id="que-es">
-    <h1>NutriApp Integral</h1>
-    <h2>Cuida, conecta y acompaña a quien más lo necesita</h2>
-    <p>
-      Plataforma digital integral para el seguimiento de personas
-      dependientes. Conecta a familiares, pacientes y profesionales de la
-      salud para gestionar medicamentos, citas, rutinas y cuidados desde un
-      solo lugar.
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>
+            Controla tus hábitos,<br>
+            visualiza tu progreso y<br>
+            mejora tu bienestar
+        </h1>
+
+        <p>
+            <strong>VitaControl</strong> es una plataforma digital que ayuda a los
+            usuarios a monitorear su alimentación, actividad física y progreso físico
+            mediante recomendaciones personalizadas adaptadas a su rutina diaria.
+        </p>
+
+    </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img src="images/comida.jpg" alt="Alimentación saludable">
+
+        <div class="image-button">
+
+            <a href="#" class="start-button" onclick="abrirRegistro()">
+                Comenzar rutina
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= BENEFICIOS ================= -->
+
+<section id="beneficios" class="beneficios">
+
+    <h2>¿Por qué elegir VitaControl?</h2>
+
+    <p class="subtitulo">
+        VitaControl te acompaña en cada paso para lograr hábitos saludables
+        mediante recomendaciones personalizadas y seguimiento constante.
     </p>
-  </section>
 
+    <div class="beneficios-container">
 
-  <section class="startup-info" id="sobre-nosotros">
-    <h2>Sobre VitaControl</h2>
-    <p class="intro-startup">Buscamos reducir el abandono frecuente de dietas y rutinas de ejercicio por falta de motivación y seguimiento.</p>
-    <div class="mision-vision">
-      <div class="card">
-        <h3>Misión</h3>
-        <p>Ayudar a las personas a construir y mantener hábitos saludables; por medio de una solución digital inteligente, accesible y personalizada que contribuya a mejorar su calidad de vida.</p>
-      </div>
-      <div class="card">
-        <h3>Visión</h3>
-        <p>Ser una solución referente en el cuidado de la salud física, promoviendo estilos de vida saludables mediante tecnología innovadora y personalizada.</p>
-      </div>
+        <div class="beneficio-card">
+
+            <i class="fa-solid fa-utensils"></i>
+
+            <h3>Alimentación Personalizada</h3>
+
+            <p>
+                Recibe recomendaciones nutricionales adaptadas a tus objetivos,
+                preferencias y estilo de vida.
+            </p>
+
+        </div>
+
+        <div class="beneficio-card">
+
+            <i class="fa-solid fa-heart-pulse"></i>
+
+            <h3>Monitorea tu Progreso</h3>
+
+            <p>
+                Registra peso, actividad física y hábitos saludables para
+                visualizar tu evolución de forma sencilla.
+            </p>
+
+        </div>
+
+        <div class="beneficio-card">
+
+            <i class="fa-solid fa-dumbbell"></i>
+
+            <h3>Rutinas Adaptadas</h3>
+
+            <p>
+                Accede a ejercicios personalizados según tu tiempo disponible
+                y condición física.
+            </p>
+
+        </div>
+
+        <div class="beneficio-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h3>Comunidad Activa</h3>
+
+            <p>
+                Comparte experiencias, recibe consejos y mantente motivado con
+                otros usuarios.
+            </p>
+
+        </div>
+
     </div>
-  </section>
 
-
-  <section class="problematica" id="como-funciona">
-    <h2>Antecedentes y Solución</h2>
-    <p>El sobrepeso y la obesidad se han convertido en una problemática creciente de salud pública. Por ello, VitaControl busca ayudar a las personas a mejorar su bienestar físico mediante una aplicación inteligente que brinde seguimiento constante, motivación y recomendaciones personalizadas.</p>
-
-    <h3>Nuestra propuesta incluye:</h3>
-    <ul>
-      <li>Una aplicación móvil y página web que permite monitorear la alimentación, actividad física y evolución del progreso del usuario.</li>
-      <li>Integración de IA adaptativa para configurar rutinas y sugerencias alimenticias entrenada con los datos de los usuarios.</li>
-      <li>Un enfoque dual para nuestro segmento objetivo: personas de 18 a 50 años que quieran reducir su peso y nutricionistas que quieran generar un ingreso extra.</li>
-    </ul>
-  </section>
-
-  <section class="integrantes" id="equipo">
-    <h2>Team Members</h2>
-    <div class="team-grid">
-
-      <div class="member">
-        <h3>Waldo Alonso Portal Inga</h3>
-        <p>Desarrollador y miembro del equipo.</p>
-      </div>
-
-      <div class="member">
-        <h3>Gabriel Alejandro Vilchez Vite</h3>
-        <p>Desarrollador y miembro del equipo.</p>
-      </div>
-
-      <div class="member">
-        <h3>Poly Gabriel Alcantara Baldeon</h3>
-        <p>Desarrollador y miembro del equipo.</p>
-      </div>
-
-      <div class="member">
-        <h3>Giordano Sebastian Trejo Espejo</h3>
-        <p>Desarrollador y miembro del equipo.</p>
-      </div>
     </div>
-  </section>
 
-  <section class="preguntas-frecuentes">
-    <h2>Preguntas frecuentes</h2>
-    <div class="faq-item">
-      <h3>¿Cómo puedo llevar el seguimiento de la alimentación?</h3>
-      <p>Puedes registrar y consultar la alimentación diaria de la persona dependiente de forma sencilla desde un solo lugar.</p>
-    </div>
-    <div class="faq-item">
-      <h3>¿Puedo registrar comidas y cantidades?</h3>
-      <p>Sí, puedes registrar las comidas, horarios y cantidades consumidas para mantener un mejor seguimiento nutricional.</p>
-    </div>
-    <div class="faq-item">
-      <h3>¿Puedo crear planes de alimentación personalizados?</h3>
-      <p>Sí, la plataforma permite gestionar recomendaciones y planes de alimentación adaptados a las necesidades de cada persona.</p>
-    </div>
-    <div class="faq-item">
-      <h3>¿Los familiares y profesionales pueden consultar la información?</h3>
-      <p>Sí, los familiares y profesionales de la salud pueden acceder a la información nutricional y colaborar en el seguimiento.</p>
-    </div>
-    <div class="faq-item">
-      <h3>¿Puedo recibir recordatorios de alimentación e hidratación?</h3>
-      <p>Sí, puedes configurar recordatorios para comidas, hidratación, suplementos y otras rutinas de cuidado.</p>
-    </div>
-  </section>
-</main>
+</section>
 
-<footer>
-  <p>&copy; 2026 NutriApp Integral / Proyecto VitaControl. Todos los derechos reservados.</p>
-</footer>
+
+
+</section>
+
+<!-- ================= FUNCIONES ================= -->
+
+<section id="funciones" class="funciones">
+
+    <h2>Funciones de VitaControl</h2>
+
+    <p class="subtitulo">
+        Todo lo que necesitas para mejorar tus hábitos saludables desde una sola aplicación.
+    </p>
+
+    <div class="funciones-container">
+
+        <div class="funcion-card">
+
+            <i class="fa-solid fa-user"></i>
+
+            <h3>Perfil Personal</h3>
+
+            <p>
+                Configura tus datos personales, objetivos de salud y preferencias para recibir recomendaciones adaptadas a ti.
+            </p>
+
+        </div>
+
+        <div class="funcion-card">
+
+            <i class="fa-solid fa-clipboard-list"></i>
+
+            <h3>Plan Nutricional</h3>
+
+            <p>
+                Obtén planes alimenticios personalizados según tu peso, horario y objetivos de bienestar.
+            </p>
+
+        </div>
+
+        <div class="funcion-card">
+
+            <i class="fa-solid fa-person-running"></i>
+
+            <h3>Rutinas de Ejercicio</h3>
+
+            <p>
+                Descubre ejercicios adaptados a tu condición física y al tiempo que tienes disponible.
+            </p>
+
+        </div>
+
+        <div class="funcion-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>Seguimiento del Progreso</h3>
+
+            <p>
+                Visualiza tu evolución mediante estadísticas, peso, actividad física y metas alcanzadas.
+            </p>
+
+        </div>
+
+        <div class="funcion-card">
+
+            <i class="fa-solid fa-bell"></i>
+
+            <h3>Recordatorios Inteligentes</h3>
+
+            <p>
+                Recibe notificaciones para beber agua, hacer ejercicio y cumplir tus objetivos diarios.
+            </p>
+
+        </div>
+
+        <div class="funcion-card">
+
+            <i class="fa-solid fa-comments"></i>
+
+            <h3>Comunidad</h3>
+
+            <p>
+                Comparte experiencias, consejos y motivación con otros usuarios que buscan mejorar su salud.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PROGRESO ================= -->
+
+<section id="progreso" class="progreso">
+
+    <h2>Visualiza tu progreso</h2>
+
+    <p class="subtitulo">
+        Monitorea tus avances y mantente motivado con estadísticas claras y objetivos alcanzados.
+    </p>
+
+    <div class="progreso-container">
+
+        <div class="progreso-info">
+
+            <h3>Tu evolución en un solo lugar</h3>
+
+            <p>
+                VitaControl registra tu peso, actividad física, alimentación
+                y cumplimiento de metas para que puedas visualizar tu progreso
+                de manera sencilla y tomar mejores decisiones para tu salud.
+            </p>
+
+            <ul>
+
+                <li>✅ Registro de peso semanal.</li>
+
+                <li>✅ Seguimiento de calorías y alimentación.</li>
+
+                <li>✅ Historial de actividad física.</li>
+
+                <li>✅ Cumplimiento de objetivos diarios.</li>
+
+                <li>✅ Estadísticas fáciles de entender.</li>
+
+            </ul>
+
+        </div>
+
+        <div class="progreso-estadisticas">
+
+            <div class="estadistica">
+
+                <h3>85%</h3>
+
+                <p>Metas cumplidas</p>
+
+            </div>
+
+            <div class="estadistica">
+
+                <h3>12 kg</h3>
+
+                <p>Peso perdido</p>
+
+            </div>
+
+            <div class="estadistica">
+
+                <h3>30</h3>
+
+                <p>Días consecutivos</p>
+
+            </div>
+
+            <div class="estadistica">
+
+                <h3>250+</h3>
+
+                <p>Usuarios activos</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= SOBRE NOSOTROS ================= -->
+
+<section id="nosotros" class="nosotros">
+
+    <div class="nosotros-imagen">
+
+        <!-- Puedes cambiar esta imagen -->
+        <img src="images/nosotros.jpg" alt="Equipo VitaControl">
+
+    </div>
+
+    <div class="nosotros-texto">
+
+        <h2>Sobre Nosotros</h2>
+
+        <p>
+            En <strong>VitaControl</strong> creemos que adoptar hábitos saludables
+            no debería ser complicado. Nuestra plataforma fue creada para ayudar
+            a las personas a mejorar su alimentación, mantenerse activas y alcanzar
+            sus objetivos de bienestar mediante herramientas inteligentes y
+            recomendaciones personalizadas.
+        </p>
+
+        <p>
+            Nuestro propósito es brindar una experiencia sencilla, accesible y
+            motivadora que permita a cada usuario monitorear su progreso y crear
+            hábitos sostenibles a largo plazo.
+        </p>
+
+        <div class="valores">
+
+            <div class="valor">
+                <i class="fa-solid fa-heart"></i>
+                <h4>Bienestar</h4>
+            </div>
+
+            <div class="valor">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h4>Innovación</h4>
+            </div>
+
+            <div class="valor">
+                <i class="fa-solid fa-user-group"></i>
+                <h4>Compromiso</h4>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTACTO ================= -->
+
+<section id="contacto" class="contacto">
+
+    <h2>¿Necesitas ayuda?</h2>
+
+    <p class="subtitulo">
+        Estamos aquí para ayudarte. Si tienes alguna duda, sugerencia o inconveniente,
+        puedes comunicarte con nosotros.
+    </p>
+
+    <div class="contacto-container">
+
+        <!-- Información -->
+
+        <div class="contacto-info">
+
+            <h3>Información de contacto</h3>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                vitacontrol@gmail.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +51 999 999 999
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Lima, Perú
+            </p>
+
+            <p>
+                <i class="fa-solid fa-clock"></i>
+                Lunes - Viernes
+                <br>
+                8:00 AM - 6:00 PM
+            </p>
+
+        </div>
+
+        <!-- Formulario -->
+
+        <div class="contacto-form">
+
+            <form>
+
+                <input type="text" placeholder="Nombre completo" required>
+
+                <input type="email" placeholder="Correo electrónico" required>
+
+                <input type="text" placeholder="Asunto">
+
+                <textarea
+                        rows="6"
+                        placeholder="Escribe tu mensaje..."
+                        required>
+                </textarea>
+
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LOGIN ================= -->
+
+<div id="loginModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="cerrarLogin()">&times;</span>
+
+        <h2>Iniciar Sesión</h2>
+
+        <input type="email" placeholder="Correo electrónico">
+
+        <input type="password" placeholder="Contraseña">
+
+        <button>Ingresar</button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= REGISTRO ================= -->
+
+<div id="registroModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="cerrarRegistro()">&times;</span>
+
+        <h2>Crear Cuenta</h2>
+
+        <input type="text" placeholder="Nombre completo">
+
+        <input type="email" placeholder="Correo">
+
+        <input type="password" placeholder="Contraseña">
+
+        <button type="submit" id="btnRegistro">
+            Registrarse
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
 </body>
 </html>
