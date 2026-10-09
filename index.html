@@ -1,511 +1,223 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>NutriApp</title>
-
-    <!-- CSS -->
+    <meta name="theme-color" content="#f4f7f2">
+    <meta name="description" content="NutriApp Integral conecta alimentación, movimiento y hábitos con un plan personal y acompañamiento profesional.">
+    <title>NutriApp Integral | Hábitos reales, a tu ritmo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome (Íconos) -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-
 <body>
-
-<!-- ================= NAVBAR ================= -->
-
-<header>
-
-    <nav class="navbar">
-
-        <div class="logo">
-            NutriApp
+<header class="site-header">
+    <nav class="navbar wrap" aria-label="Navegación principal">
+        <a class="brand" href="#inicio" aria-label="NutriApp Integral, inicio">
+            <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 25V13m0 6c0-5-3-8-8-8 0 5 3 8 8 8Zm0-4c0-5 3-8 8-8 0 5-3 8-8 8Z"/></svg></span>
+            <span class="brand-name">NutriApp<small>INTEGRAL</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
+        <div class="nav-menu" id="nav-menu">
+            <div class="nav-links">
+                <a href="#beneficios">Beneficios</a>
+                <a href="#funciones">Funciones</a>
+                <a href="#profesionales">Para nutricionistas</a>
+                <a href="#suscripcion">Suscripción</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="nav-actions">
+                <button class="button button-text" type="button" onclick="abrirLogin()">Iniciar sesión</button>
+                <button class="button button-primary" type="button" onclick="abrirRegistro()">Empieza gratis</button>
+            </div>
         </div>
-
-        <ul class="nav-links">
-
-            <li><a href="#beneficios">Beneficios</a></li>
-            <li><a href="#funciones">Funciones</a></li>
-            <li><a href="#progreso">Progreso</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-
-        </ul>
-
-        <div class="buttons">
-
-            <button class="btn-login" onclick="abrirLogin()">
-                Iniciar sesión
-            </button>
-
-            <button class="btn-register" onclick="abrirRegistro()">
-                Registrarse
-            </button>
-
-        </div>
-
     </nav>
-
 </header>
 
-<!-- ================= HERO ================= -->
-
-<section class="hero">
-
-    <div class="hero-text">
-
-        <h1>
-            Controla tus hábitos,<br>
-            visualiza tu progreso y<br>
-            mejora tu bienestar
-        </h1>
-
-        <p>
-            <strong>NutriApp</strong> es una plataforma digital que ayuda a los
-            usuarios a monitorear su alimentación, actividad física y progreso físico
-            mediante recomendaciones personalizadas adaptadas a su rutina diaria.
-        </p>
-
-    </div>
-
-    </div>
-
-    <div class="hero-image">
-
-        <img src="image/comida.jpg" alt="Alimentación saludable">
-
-        <div class="image-button">
-
-            <a href="#" class="start-button" onclick="abrirRegistro()">
-                Comenzar rutina
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= BENEFICIOS ================= -->
-
-<section id="beneficios" class="beneficios">
-
-    <h2>¿Por qué elegir NutriApp?</h2>
-
-    <p class="subtitulo">
-        NutriApp te acompaña en cada paso para lograr hábitos saludables
-        mediante recomendaciones personalizadas y seguimiento constante.
-    </p>
-
-    <div class="beneficios-container">
-
-        <div class="beneficio-card">
-
-            <i class="fa-solid fa-utensils"></i>
-
-            <h3>Alimentación Personalizada</h3>
-
-            <p>
-                Recibe recomendaciones nutricionales adaptadas a tus objetivos,
-                preferencias y estilo de vida.
-            </p>
-
-        </div>
-
-        <div class="beneficio-card">
-
-            <i class="fa-solid fa-heart-pulse"></i>
-
-            <h3>Monitorea tu Progreso</h3>
-
-            <p>
-                Registra peso, actividad física y hábitos saludables para
-                visualizar tu evolución de forma sencilla.
-            </p>
-
-        </div>
-
-        <div class="beneficio-card">
-
-            <i class="fa-solid fa-dumbbell"></i>
-
-            <h3>Rutinas Adaptadas</h3>
-
-            <p>
-                Accede a ejercicios personalizados según tu tiempo disponible
-                y condición física.
-            </p>
-
-        </div>
-
-        <div class="beneficio-card">
-
-            <i class="fa-solid fa-users"></i>
-
-            <h3>Comunidad Activa</h3>
-
-            <p>
-                Comparte experiencias, recibe consejos y mantente motivado con
-                otros usuarios.
-            </p>
-
-        </div>
-
-    </div>
-
-    </div>
-
-</section>
-
-
-
-</section>
-
-<!-- ================= FUNCIONES ================= -->
-
-<section id="funciones" class="funciones">
-
-    <h2>Funciones de NutriApp</h2>
-
-    <p class="subtitulo">
-        Todo lo que necesitas para mejorar tus hábitos saludables desde una sola aplicación.
-    </p>
-
-    <div class="funciones-container">
-
-        <div class="funcion-card">
-
-            <i class="fa-solid fa-user"></i>
-
-            <h3>Perfil Personal</h3>
-
-            <p>
-                Configura tus datos personales, objetivos de salud y preferencias para recibir recomendaciones adaptadas a ti.
-            </p>
-
-        </div>
-
-        <div class="funcion-card">
-
-            <i class="fa-solid fa-clipboard-list"></i>
-
-            <h3>Plan Nutricional</h3>
-
-            <p>
-                Obtén planes alimenticios personalizados según tu peso, horario y objetivos de bienestar.
-            </p>
-
-        </div>
-
-        <div class="funcion-card">
-
-            <i class="fa-solid fa-person-running"></i>
-
-            <h3>Rutinas de Ejercicio</h3>
-
-            <p>
-                Descubre ejercicios adaptados a tu condición física y al tiempo que tienes disponible.
-            </p>
-
-        </div>
-
-        <div class="funcion-card">
-
-            <i class="fa-solid fa-chart-line"></i>
-
-            <h3>Seguimiento del Progreso</h3>
-
-            <p>
-                Visualiza tu evolución mediante estadísticas, peso, actividad física y metas alcanzadas.
-            </p>
-
-        </div>
-
-        <div class="funcion-card">
-
-            <i class="fa-solid fa-bell"></i>
-
-            <h3>Recordatorios Inteligentes</h3>
-
-            <p>
-                Recibe notificaciones para beber agua, hacer ejercicio y cumplir tus objetivos diarios.
-            </p>
-
-        </div>
-
-        <div class="funcion-card">
-
-            <i class="fa-solid fa-comments"></i>
-
-            <h3>Comunidad</h3>
-
-            <p>
-                Comparte experiencias, consejos y motivación con otros usuarios que buscan mejorar su salud.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= PROGRESO ================= -->
-
-<section id="progreso" class="progreso">
-
-    <h2>Visualiza tu progreso</h2>
-
-    <p class="subtitulo">
-        Monitorea tus avances y mantente motivado con estadísticas claras y objetivos alcanzados.
-    </p>
-
-    <div class="progreso-container">
-
-        <div class="progreso-info">
-
-            <h3>Tu evolución en un solo lugar</h3>
-
-            <p>
-                NutriApp registra tu peso, actividad física, alimentación
-                y cumplimiento de metas para que puedas visualizar tu progreso
-                de manera sencilla y tomar mejores decisiones para tu salud.
-            </p>
-
-            <ul>
-
-                <li>✅ Registro de peso semanal.</li>
-
-                <li>✅ Seguimiento de calorías y alimentación.</li>
-
-                <li>✅ Historial de actividad física.</li>
-
-                <li>✅ Cumplimiento de objetivos diarios.</li>
-
-                <li>✅ Estadísticas fáciles de entender.</li>
-
-            </ul>
-
-        </div>
-
-        <div class="progreso-estadisticas">
-
-            <div class="estadistica">
-
-                <h3>85%</h3>
-
-                <p>Metas cumplidas</p>
-
+<main>
+    <!-- 1. Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero-inner wrap">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="eyebrow-dot"></span> Bienestar que cabe en tu vida</p>
+                <h1>Hábitos reales.<br>Una vida más saludable.<br><span>A tu ritmo.</span></h1>
+                <p class="lead">Alimentación, movimiento y pequeños pasos en un solo lugar. NutriApp Integral te ayuda a gestionar tu peso y construir hábitos sostenibles, con un plan pensado para ti y apoyo profesional.</p>
+                <div class="hero-actions">
+                    <button class="button button-primary" type="button" onclick="abrirRegistro()">Empieza gratis <span aria-hidden="true">→</span></button>
+                    <a class="button button-outline" href="#beneficios">Conoce cómo funciona</a>
+                </div>
+                <div class="hero-note"><span class="avatar-stack" aria-hidden="true"><i>✓</i><i>♥</i><i>+</i></span><span>Un camino personal, con acompañamiento profesional</span></div>
             </div>
-
-            <div class="estadistica">
-
-                <h3>12 kg</h3>
-
-                <p>Peso perdido</p>
-
+            <div class="hero-visual" aria-label="Vista previa del resumen diario de NutriApp">
+                <div class="app-preview dashboard-preview">
+                    <div class="app-topline">
+                        <a class="brand brand-small" href="#inicio"><span class="brand-mark"><svg viewBox="0 0 32 32"><path d="M16 25V13m0 6c0-5-3-8-8-8 0 5 3 8 8 8Zm0-4c0-5 3-8 8-8 0 5-3 8-8 8Z"/></svg></span><span class="brand-name">NutriApp<small>INTEGRAL</small></span></a>
+                        <span class="user-initial">CT</span>
+                    </div>
+                    <h2>Hola, Camila <span aria-hidden="true">☀️</span></h2>
+                    <p class="muted tiny">Jueves, 8 de octubre</p>
+                    <div class="quick-stats">
+                        <div><span>Constancia semanal</span><strong>5 de 7 días</strong></div>
+                        <div><span>Actividad de hoy</span><strong>30 min</strong></div>
+                    </div>
+                    <div class="daily-summary">
+                        <p class="summary-label">TU RESUMEN DE HOY</p>
+                        <div class="calorie-row"><div class="calorie-ring"><b>1 160</b><small>kcal registradas</small></div><div class="calorie-goal"><small>Referencia diaria</small><strong>1 800 kcal</strong><small>640 kcal por registrar</small></div></div>
+                        <div class="macro-row"><div><span>Proteínas</span><b>78 / 110 g</b><i><em style="width:70%"></em></i></div><div><span>Carbohidratos</span><b>131 / 205 g</b><i><em style="width:64%"></em></i></div><div><span>Grasas</span><b>36 / 60 g</b><i><em style="width:60%"></em></i></div></div>
+                    </div>
+                    <div class="preview-actions"><button type="button" onclick="abrirRegistro()">Registrar comida</button><a href="#funciones">Mi Plan</a></div>
+                    <div class="app-tabs"><span>⌂<small>Inicio</small></span><span>♧<small>Mi Plan</small></span><span>⊕<small>Comidas</small></span><span>▥<small>Progreso</small></span><span>♙<small>Nutricionista</small></span></div>
+                </div>
+                <div class="float-chip"><span class="chip-icon">✦</span><span><b>Un paso a la vez</b><small>Tu progreso, en contexto</small></span></div>
+                <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
             </div>
-
-            <div class="estadistica">
-
-                <h3>30</h3>
-
-                <p>Días consecutivos</p>
-
-            </div>
-
-            <div class="estadistica">
-
-                <h3>250+</h3>
-
-                <p>Usuarios activos</p>
-
-            </div>
-
         </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- ================= SOBRE NOSOTROS ================= -->
-
-<section id="nosotros" class="nosotros">
-
-    <div class="nosotros-imagen">
-
-        <!-- Puedes cambiar esta imagen -->
-        <img src="image/nosotros.jpg" alt="Equipo NutriAppl">
-
-    </div>
-
-    <div class="nosotros-texto">
-
-        <h2>Sobre Nosotros</h2>
-
-        <p>
-            En <strong>NutriApp</strong> creemos que adoptar hábitos saludables
-            no debería ser complicado. Nuestra plataforma fue creada para ayudar
-            a las personas a mejorar su alimentación, mantenerse activas y alcanzar
-            sus objetivos de bienestar mediante herramientas inteligentes y
-            recomendaciones personalizadas.
-        </p>
-
-        <p>
-            Nuestro propósito es brindar una experiencia sencilla, accesible y
-            motivadora que permita a cada usuario monitorear su progreso y crear
-            hábitos sostenibles a largo plazo.
-        </p>
-
-        <div class="valores">
-
-            <div class="valor">
-                <i class="fa-solid fa-heart"></i>
-                <h4>Bienestar</h4>
+    <!-- 2. Beneficios -->
+    <section class="section benefits" id="beneficios">
+        <div class="wrap">
+            <div class="section-heading">
+                <p class="eyebrow">Bienestar para tu día a día</p>
+                <h2>Cuidarte puede ser parte de tu día.</h2>
+                <p>Una mirada integral a tu salud: lo que comes, cómo te mueves y cómo te sientes.</p>
             </div>
-
-            <div class="valor">
-                <i class="fa-solid fa-lightbulb"></i>
-                <h4>Innovación</h4>
+            <div class="benefit-grid">
+                <article class="benefit-card"><span class="icon-tile"><svg viewBox="0 0 24 24"><path d="M12 20v-8m0 4c0-3-2-5-6-5 0 4 2 6 6 6Zm0-6c0-3 2-5 6-5 0 4-2 6-6 6Z"/></svg></span><h3>Hábitos que puedes sostener</h3><p>Organiza tu alimentación y movimiento con metas realistas. Avanza sin dietas extremas ni buscar la perfección.</p></article>
+                <article class="benefit-card"><span class="icon-tile"><svg viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3m4 0h9M13 4v6M7 14v6"/></svg></span><h3>Un plan con tu contexto</h3><p>Tus gustos, restricciones, horarios y presupuesto importan. Encuentra opciones que se adapten a tu vida.</p></article>
+                <article class="benefit-card"><span class="icon-tile"><svg viewBox="0 0 24 24"><path d="M20.8 8.7c0 4.7-8.8 10-8.8 10s-8.8-5.3-8.8-10A4.7 4.7 0 0 1 12 6.4a4.7 4.7 0 0 1 8.8 2.3Z"/><path d="m8.5 12 2.1 2 4.7-4.8"/></svg></span><h3>No tienes que hacerlo a solas</h3><p>Comparte tu evolución con un nutricionista, con tu autorización, y recibe orientación para ajustar el camino.</p></article>
             </div>
+        </div>
+    </section>
 
-            <div class="valor">
-                <i class="fa-solid fa-user-group"></i>
-                <h4>Compromiso</h4>
+    <!-- 3. Plan -->
+    <section class="section plan-section" id="funciones">
+        <div class="wrap split-layout plan-layout">
+            <div class="section-copy">
+                <p class="eyebrow">Hecho para ti</p>
+                <h2>Un plan que se adapta a ti.</h2>
+                <p>Define tus objetivos y preferencias; tu nutricionista puede revisar y ajustar el plan contigo.</p>
+                <ul class="check-list">
+                    <li>Objetivos de bienestar y gestión del peso</li>
+                    <li>Gustos, alergias y restricciones alimentarias</li>
+                    <li>Tiempo para cocinar y nivel de actividad</li>
+                    <li>Presupuesto y alimentos de tu entorno</li>
+                </ul>
+                <p class="note-green">Las sustituciones conservan tus restricciones y quedan pendientes de revisión profesional.</p>
             </div>
-
+            <div class="app-preview meal-preview">
+                <div class="meal-heading"><div><h3>Mi Plan</h3><p>Semana del 5 al 11 de octubre</p></div><span class="status status-ai">Propuesta de IA</span></div>
+                <div class="week-days"><span>L<strong>5</strong></span><span>M<strong>6</strong></span><span>M<strong>7</strong></span><span class="active">J<strong>8</strong></span><span>V<strong>9</strong></span><span>S<strong>10</strong></span><span>D<strong>11</strong></span></div>
+                <div class="meal-cards">
+                    <article class="meal-card"><img src="image/comida.jpg" alt="Ingredientes frescos para una comida equilibrada"><div class="meal-content"><div class="meal-meta"><span>Almuerzo · 13:00</span><b>620 kcal</b></div><h4>Pollo con quinoa y ensalada</h4><p>120 g de pollo + 1 taza de quinoa + verduras</p><small>Propuesta de IA · pendiente de revisión</small><div class="meal-bottom"><span>25 min · 1 porción</span><a href="#suscripcion">↻ Reemplazar</a></div></div></article>
+                    <article class="meal-card"><img src="image/comida.jpg" alt="Comida preparada con verduras y proteínas"><div class="meal-content"><div class="meal-meta"><span>Cena · 19:30</span><b>640 kcal</b></div><h4>Lentejas con arroz y palta</h4><p>1 taza de lentejas + ½ taza de arroz + ¼ palta</p><small>Propuesta de IA · pendiente de revisión</small><div class="meal-bottom"><span>25 min · 1 porción</span><a href="#suscripcion">↻ Reemplazar</a></div></div></article>
+                </div>
+                <div class="meal-note"><b>Hecho para tu día a día</b><span>Comida casera · sin lácteos ni maní · hasta 30 min por comida</span><span>Costo diario estimado: S/. 18,50</span><small>Dentro de un presupuesto de S/. 20 al día (S/. 140 por semana). Los precios pueden variar.</small></div>
+            </div>
         </div>
+    </section>
 
-    </div>
-
-</section>
-
-<!-- ================= CONTACTO ================= -->
-
-<section id="contacto" class="contacto">
-
-    <h2>¿Necesitas ayuda?</h2>
-
-    <p class="subtitulo">
-        Estamos aquí para ayudarte. Si tienes alguna duda, sugerencia o inconveniente,
-        puedes comunicarte con nosotros.
-    </p>
-
-    <div class="contacto-container">
-
-        <!-- Información -->
-
-        <div class="contacto-info">
-
-            <h3>Información de contacto</h3>
-
-            <p>
-                <i class="fa-solid fa-envelope"></i>
-                NutriApp@gmail.com
-            </p>
-
-            <p>
-                <i class="fa-solid fa-phone"></i>
-                +51 999 999 999
-            </p>
-
-            <p>
-                <i class="fa-solid fa-location-dot"></i>
-                Lima, Perú
-            </p>
-
-            <p>
-                <i class="fa-solid fa-clock"></i>
-                Lunes - Viernes
-                <br>
-                8:00 AM - 6:00 PM
-            </p>
-
+    <!-- 4. Progreso -->
+    <section class="section progress-section" id="progreso">
+        <div class="wrap split-layout progress-layout">
+            <div class="section-copy">
+                <p class="eyebrow">Cada avance cuenta</p>
+                <h2>Mira la tendencia.<br>Reconoce tus avances.</h2>
+                <p>Revisa peso, medidas, actividad y constancia en el tiempo. Los cambios diarios son normales: lo importante es entender el contexto y cómo te sientes, junto a tu nutricionista.</p>
+                <ul class="check-list"><li>Gráficos por periodo para ver la evolución</li><li>Registros de hábitos y actividad en una misma vista</li><li>Metas orientativas que puedes revisar y ajustar</li></ul>
+            </div>
+            <div class="chart-card">
+                <div class="chart-header"><div><h3>Tu evolución, a largo plazo</h3><p>10 sep. — 8 oct. 2026</p></div><span class="weight-pill">76,4 kg</span></div>
+                <div class="chart-area"><div class="y-axis"><span>78</span><span>76</span><span>74</span><span>72</span></div><svg viewBox="0 0 660 190" role="img" aria-label="Tendencia de peso descendente entre septiembre y octubre"><g class="grid-lines"><path d="M0 15H660M0 68H660M0 121H660M0 174H660"/></g><path class="goal-line" d="M0 174H660"/><path class="progress-line" d="M0 14 82 19 165 27 248 42 330 29 413 43 495 56 578 63 660 72"/><circle class="chart-dot" cx="660" cy="72" r="5"/></svg></div>
+                <div class="chart-labels"><span>10 sep.</span><span>24 sep.</span><span>8 oct.</span></div>
+                <div class="chart-legend"><span><i></i>Peso registrado</span><span class="legend-goal">— Meta personal: 72 kg</span></div>
+            </div>
         </div>
+    </section>
 
-        <!-- Formulario -->
-
-        <div class="contacto-form">
-
-            <form>
-
-                <input type="text" placeholder="Nombre completo" required>
-
-                <input type="email" placeholder="Correo electrónico" required>
-
-                <input type="text" placeholder="Asunto">
-
-                <textarea
-                        rows="6"
-                        placeholder="Escribe tu mensaje..."
-                        required>
-                </textarea>
-
-                <button type="submit">
-                    Enviar mensaje
-                </button>
-
-            </form>
-
+    <!-- 5. Proceso -->
+    <section class="section steps-section">
+        <div class="wrap">
+            <div class="section-heading left-heading"><p class="eyebrow">Acompañamiento a tu ritmo</p><h2>Primero te conocemos y después te acompañamos.</h2></div>
+            <div class="steps-grid">
+                <article class="step"><span>01</span><h3>Cuéntanos sobre ti</h3><p>Crea tu cuenta y completa tus objetivos, preferencias, restricciones y rutina.</p></article>
+                <article class="step"><span>02</span><h3>Construye tu plan</h3><p>Explora opciones para tu semana y solicita la revisión de tu nutricionista.</p></article>
+                <article class="step"><span>03</span><h3>Registra tu día</h3><p>Añade comidas, agua, actividad y hábitos. Lo sencillo también cuenta.</p></article>
+                <article class="step"><span>04</span><h3>Ajusta con apoyo</h3><p>Revisa tendencias, comparte tus avances y organiza tus consultas profesionales.</p></article>
+            </div>
         </div>
+    </section>
 
+    <!-- 6. Nutricionistas -->
+    <section class="section pro-section" id="profesionales">
+        <div class="wrap split-layout pro-layout">
+            <div class="section-copy pro-copy">
+                <p class="eyebrow eyebrow-light">Para nutricionistas</p>
+                <h2>Más claridad para acompañar mejor.</h2>
+                <p>Centraliza la información de tus pacientes y conecta la planificación con el seguimiento. Tu criterio profesional guía cada decisión.</p>
+                <ul class="pro-feature-list">
+                    <li><span class="pro-icon">♙</span><span><b>Pacientes</b><small>Historia, objetivos, restricciones y registros autorizados en un mismo espacio.</small></span></li>
+                    <li><span class="pro-icon">▤</span><span><b>Planes personalizados</b><small>Crea, edita y revisa propuestas antes de aprobar un nuevo plan.</small></span></li>
+                    <li><span class="pro-icon">▥</span><span><b>Seguimiento</b><small>Consulta tendencias, notas e historial para preparar cada atención.</small></span></li>
+                    <li><span class="pro-icon">▦</span><span><b>Agenda</b><small>Organiza disponibilidad, consultas y próximos seguimientos.</small></span></li>
+                </ul>
+                <a class="button button-lime" href="#contacto">Conocer el espacio profesional <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="professional-preview">
+                <div class="pro-dashboard-head"><div><h3>Buen día, Elena</h3><p>Panel profesional</p></div><span class="user-initial">EV</span></div>
+                <div class="pro-stats"><div><span>Pacientes activos</span><b>24</b><small>28 pacientes en total</small></div><div><span>Consultas de hoy</span><b>3</b><small>2 confirmadas · 1 pendiente</small></div><div><span>Propuestas por revisar</span><b>2</b><small>La aprobación es tu decisión</small></div></div>
+                <div class="patient-list"><h4>Necesitan tu atención</h4><div><i>LS</i><span><b>Lucía Soto</b><small>10 días sin seguimiento</small></span><em>Seguimiento</em></div><div><i>MP</i><span><b>Marco Paredes</b><small>14 días sin seguimiento</small></span><em>Seguimiento</em></div><div><i>CT</i><span><b>Camila Torres</b><small>Nueva propuesta semanal de IA · versión 2</small></span><em>Revisión de plan</em></div></div>
+                <div class="next-appointment"><span>▦</span><span><b>Próxima consulta · Camila Torres</b><small>12 oct. 2026 · 17:00 · confirmada</small></span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. IA y revisión profesional -->
+    <section class="ai-section">
+        <div class="wrap ai-layout">
+            <div><p class="eyebrow eyebrow-warm">Tecnología con criterio</p><h2>La IA propone.<br>Tu nutricionista decide.</h2><p>La inteligencia artificial es una herramienta de apoyo. Sus propuestas están sujetas a revisión profesional y no reemplazan el diagnóstico, la evaluación ni el juicio de tu nutricionista.</p></div>
+            <div class="ai-points"><article><span>✧</span><div><b>Propuestas identificadas</b><p>Sabrás cuándo una opción fue generada por IA y si está pendiente de revisión.</p></div></article><article><span>▣</span><div><b>Revisión antes de aprobar</b><p>El profesional valida tu contexto, ingredientes, restricciones y necesidades.</p></div></article><article><span>♢</span><div><b>Tu decisión, tus datos</b><p>El acceso profesional requiere tu autorización y se usa para la atención nutricional.</p></div></article></div>
+        </div>
+    </section>
+
+    <!-- 8. Suscripción -->
+    <section class="section subscription-section" id="suscripcion">
+        <div class="wrap">
+            <div class="section-heading"><p class="eyebrow">Elige cómo empezar</p><h2>Plan de suscripción</h2><p>Funciones para acompañar tus hábitos y tu progreso.</p></div>
+            <article class="subscription-card"><span class="plan-tag">NutriApp Integral</span><h3>Premium</h3><p class="price">S/. 80</p><ul><li>Propuestas adaptativas de IA, sujetas a revisión</li><li>Análisis de progreso detallado</li><li>Herramientas de seguimiento profesional</li></ul><button class="button button-lime" type="button" onclick="abrirRegistro()">Empieza Premium</button></article>
+        </div>
+    </section>
+
+    <!-- 9. Cierre y contacto -->
+    <section class="section contact-cta" id="contacto">
+        <div class="wrap contact-layout">
+            <div class="contact-copy"><span class="contact-symbol"><svg viewBox="0 0 32 32"><path d="M16 25V13m0 6c0-5-3-8-8-8 0 5 3 8 8 8Zm0-4c0-5 3-8 8-8 0 5-3 8-8 8Z"/></svg></span><p class="eyebrow">Tu siguiente paso</p><h2>Hoy es un buen día para empezar a cuidarte.</h2><p>Crea tu cuenta y comienza a conocer tus hábitos. Si eres nutricionista o tienes alguna duda, conversemos sobre cómo NutriApp Integral puede ayudarte.</p><button class="button button-primary" type="button" onclick="abrirRegistro()">Empieza gratis <span aria-hidden="true">→</span></button></div>
+            <div class="contact-form-card"><h3>Conversemos</h3><p>Cuéntanos qué necesitas.</p><form id="contact-form">
+                <label for="contact-name">Nombre</label><input id="contact-name" name="name" type="text" placeholder="¿Cómo te llamas?" required>
+                <label for="contact-email">Correo electrónico</label><input id="contact-email" name="email" type="email" placeholder="tu@correo.com" required>
+                <label for="contact-message">¿En qué podemos ayudarte?</label><textarea id="contact-message" name="message" placeholder="Escribe tu consulta..." required></textarea>
+                <label class="consent"><input type="checkbox" required><span>He leído la Política de privacidad y autorizo el uso de mis datos para responder esta consulta.</span></label>
+                <button class="button button-primary" type="submit">Enviar consulta</button><p class="form-note" id="form-note" aria-live="polite">El formulario aún no está conectado para recibir consultas.</p>
+            </form></div>
+        </div>
+    </section>
+</main>
+
+<!-- 10. Footer -->
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="footer-main">
+            <div class="footer-brand"><a class="brand" href="#inicio"><span class="brand-mark"><svg viewBox="0 0 32 32"><path d="M16 25V13m0 6c0-5-3-8-8-8 0 5 3 8 8 8Zm0-4c0-5 3-8 8-8 0 5-3 8-8 8Z"/></svg></span><span class="brand-name">NutriApp<small>INTEGRAL</small></span></a><p>Nutrición, movimiento y hábitos, conectados con tu bienestar.</p><small>NutriStartup · Perú</small></div>
+            <div class="footer-column"><b>Explora NutriApp</b><a href="#beneficios">Beneficios</a><a href="#funciones">Funciones</a><a href="#profesionales">Para nutricionistas</a><a href="#suscripcion">Planes</a><a href="#contacto">Contacto</a></div>
+            <div class="footer-column"><b>Tu información</b><span>Política de privacidad</span><span>Términos y condiciones</span><span>Autorización de datos</span><button type="button" onclick="abrirLogin()">Iniciar sesión</button></div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 NutriStartup. Todos los derechos reservados.</span><a href="#inicio" aria-label="Volver al inicio">Volver arriba ↑</a></div>
     </div>
+</footer>
 
-</section>
-
-
-<!-- ================= LOGIN ================= -->
-
-<div id="loginModal" class="modal">
-
-    <div class="modal-content">
-
-        <span class="close" onclick="cerrarLogin()">&times;</span>
-
-        <h2>Iniciar Sesión</h2>
-
-        <input type="email" placeholder="Correo electrónico">
-
-        <input type="password" placeholder="Contraseña">
-
-        <button>Ingresar</button>
-
-    </div>
-
-</div>
-
-
-<!-- ================= REGISTRO ================= -->
-
-<div id="registroModal" class="modal">
-
-    <div class="modal-content">
-
-        <span class="close" onclick="cerrarRegistro()">&times;</span>
-
-        <h2>Crear Cuenta</h2>
-
-        <input type="text" placeholder="Nombre completo">
-
-        <input type="email" placeholder="Correo">
-
-        <input type="password" placeholder="Contraseña">
-
-        <button type="submit" id="btnRegistro">
-            Registrarse
-        </button>
-
-    </div>
-
-</div>
-
-
+<div id="loginModal" class="modal" aria-hidden="true"><div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="login-title"><button class="close" type="button" aria-label="Cerrar" onclick="cerrarLogin()">&times;</button><span class="modal-mark">♧</span><h2 id="login-title">Iniciar sesión</h2><p>Continúa con tu cuenta de NutriApp.</p><form id="login-form"><label for="login-email">Correo electrónico</label><input id="login-email" type="email" placeholder="tu@correo.com" required><label for="login-password">Contraseña</label><input id="login-password" type="password" placeholder="Tu contraseña" required><button class="button button-primary" type="submit">Ingresar</button><p class="modal-note" id="login-note" aria-live="polite"></p></form></div></div>
+<div id="registroModal" class="modal" aria-hidden="true"><div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="register-title"><button class="close" type="button" aria-label="Cerrar" onclick="cerrarRegistro()">&times;</button><span class="modal-mark">♧</span><h2 id="register-title">Crear cuenta</h2><p>Empieza a construir hábitos a tu ritmo.</p><form id="register-form"><label for="register-name">Nombre completo</label><input id="register-name" type="text" placeholder="¿Cómo te llamas?" required><label for="register-email">Correo electrónico</label><input id="register-email" type="email" placeholder="tu@correo.com" required><label for="register-password">Contraseña</label><input id="register-password" type="password" placeholder="Crea una contraseña" required><button class="button button-primary" type="submit">Registrarse</button><p class="modal-note" id="register-note" aria-live="polite"></p></form></div></div>
 <script src="script.js"></script>
 </body>
 </html>

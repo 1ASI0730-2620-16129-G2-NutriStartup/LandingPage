@@ -1,58 +1,77 @@
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector("#nav-menu");
+const loginModal = document.querySelector("#loginModal");
+const registerModal = document.querySelector("#registroModal");
+
+function setModal(modal, open) {
+    if (!modal) return;
+    modal.classList.toggle("is-open", open);
+    modal.setAttribute("aria-hidden", String(!open));
+    document.body.classList.toggle("modal-open", open);
+    if (open) modal.querySelector("input")?.focus();
+}
+
 function abrirLogin() {
-    document.getElementById("loginModal").style.display = "flex";
+    setModal(registerModal, false);
+    setModal(loginModal, true);
 }
 
 function cerrarLogin() {
-    document.getElementById("loginModal").style.display = "none";
+    setModal(loginModal, false);
 }
 
 function abrirRegistro() {
-    document.getElementById("registroModal").style.display = "flex";
+    setModal(loginModal, false);
+    setModal(registerModal, true);
 }
 
 function cerrarRegistro() {
-    document.getElementById("registroModal").style.display = "none";
+    setModal(registerModal, false);
 }
 
-// Cerrar el modal al hacer clic fuera de él
-window.onclick = function(event) {
+menuToggle?.addEventListener("click", () => {
+    const open = menuToggle.getAttribute("aria-expanded") !== "true";
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    navMenu?.classList.toggle("is-open", open);
+});
 
-    const login = document.getElementById("loginModal");
-    const registro = document.getElementById("registroModal");
+navMenu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("is-open");
+        menuToggle?.setAttribute("aria-expanded", "false");
+        menuToggle?.setAttribute("aria-label", "Abrir menú");
+    });
+});
 
-    if (event.target === login) {
-        login.style.display = "none";
-    }
+document.querySelectorAll(".modal").forEach((modal) => {
+    modal.addEventListener("click", (event) => {
+        if (event.target !== modal) return;
+        setModal(modal, false);
+    });
+});
 
-    if (event.target === registro) {
-        registro.style.display = "none";
-    }
-};
+document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    cerrarLogin();
+    cerrarRegistro();
+});
 
-// ===============================
-// REGISTRO
-// ===============================
-
-const btnRegistro = document.getElementById("btnRegistro");
-
-btnRegistro.addEventListener("click", function () {
-
-    const nombre = document.querySelector('#registroModal input[type="text"]').value;
-    const correo = document.querySelector('#registroModal input[type="email"]').value;
-    const contraseña = document.querySelector('#registroModal input[type="password"]').value;
-
-    if (nombre === "" || correo === "" || contraseña === "") {
-
-        alert("Por favor complete todos los campos.");
-        return;
-
-    }
-
-    // Guardar datos para usarlos en el Dashboard
-    localStorage.setItem("nombre", nombre);
-    localStorage.setItem("correo", correo);
-
-    // Redirigir al Dashboard
+document.querySelector("#register-form")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const name = document.querySelector("#register-name").value.trim();
+    const email = document.querySelector("#register-email").value.trim();
+    localStorage.setItem("nombre", name);
+    localStorage.setItem("correo", email);
     window.location.href = "dashboard.html";
+});
 
+document.querySelector("#login-form")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    document.querySelector("#login-note").textContent = "El inicio de sesión aún no está conectado.";
+});
+
+document.querySelector("#contact-form")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    document.querySelector("#form-note").textContent = "El formulario aún no está conectado para recibir consultas.";
 });
