@@ -28,8 +28,12 @@
                 <a href="#contacto">Contacto</a>
             </div>
             <div class="nav-actions">
-                <button class="button button-text" type="button" onclick="abrirLogin()">Iniciar sesión</button>
-                <button class="button button-primary" type="button" onclick="abrirRegistro()">Empieza gratis</button>
+                <a class="button button-primary"
+                   href="https://nutriapp-integral-fronte-a5799.web.app/iam/sign-in"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Iniciar Aplicación
+                </a>
             </div>
         </div>
     </nav>
@@ -215,9 +219,5 @@
         <div class="footer-bottom"><span>© 2026 NutriStartup. Todos los derechos reservados.</span><a href="#inicio" aria-label="Volver al inicio">Volver arriba ↑</a></div>
     </div>
 </footer>
-
-<div id="loginModal" class="modal" aria-hidden="true"><div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="login-title"><button class="close" type="button" aria-label="Cerrar" onclick="cerrarLogin()">&times;</button><span class="modal-mark">♧</span><h2 id="login-title">Iniciar sesión</h2><p>Continúa con tu cuenta de NutriApp.</p><form id="login-form"><label for="login-email">Correo electrónico</label><input id="login-email" type="email" placeholder="tu@correo.com" required><label for="login-password">Contraseña</label><input id="login-password" type="password" placeholder="Tu contraseña" required><button class="button button-primary" type="submit">Ingresar</button><p class="modal-note" id="login-note" aria-live="polite"></p></form></div></div>
-<div id="registroModal" class="modal" aria-hidden="true"><div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="register-title"><button class="close" type="button" aria-label="Cerrar" onclick="cerrarRegistro()">&times;</button><span class="modal-mark">♧</span><h2 id="register-title">Crear cuenta</h2><p>Empieza a construir hábitos a tu ritmo.</p><form id="register-form"><label for="register-name">Nombre completo</label><input id="register-name" type="text" placeholder="¿Cómo te llamas?" required><label for="register-email">Correo electrónico</label><input id="register-email" type="email" placeholder="tu@correo.com" required><label for="register-password">Contraseña</label><input id="register-password" type="password" placeholder="Crea una contraseña" required><button class="button button-primary" type="submit">Registrarse</button><p class="modal-note" id="register-note" aria-live="polite"></p></form></div></div>
-<script src="script.js"></script>
 </body>
 </html>
